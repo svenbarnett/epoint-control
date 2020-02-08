@@ -1,0 +1,17 @@
+{
+  "for循环": {
+    "prefix": "for",
+    "body": ["for (const ${2:item} of ${1:array}) {", "\t$0", "}"],
+    "description": "for循环"
+  },
+  "<e:detailinfo>": {
+    "prefix": "<e:detailinfo>",
+    "body": ["<e:detailinfo>", "</e:detailinfo>"],
+    "description": "详情页控件"
+  },
+  "<e:infolist>": {
+    "prefix": "<e:infolist>",
+    "body": ["<e:infolist>", "</e:infolist>"],
+    "description": "列表控件"
+  }
+}
