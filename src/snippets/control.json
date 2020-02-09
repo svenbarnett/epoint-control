@@ -1,17 +1,304 @@
 {
-  "for循环": {
-    "prefix": "for",
-    "body": ["for (const ${2:item} of ${1:array}) {", "\t$0", "}"],
-    "description": "for循环"
+  "头尾载入nesttemplate": {
+    "prefix": "<e:nesttemplate>",
+    "body": [
+      "<e:nesttemplate src=\"${1:/head.html}\" isAjax=\"${2:0}\"></e:nesttemplate>"
+    ],
+    "description": "头尾载入控件"
   },
-  "<e:detailinfo>": {
+  "栏目信息categoryinfo":{
+    "prefix":"<e:categoryinfo>",
+    "body":[
+      "<e:categoryinfo categorynum=\"001\">"
+		  " <commonTemplate>"
+			"   <![CDATA[{@linehtml}]]>"
+		  " </commonTemplate>"
+		  " <lineTemplate>"
+			"   <![CDATA["
+      "       <!--html代码-->"
+      "   ]]>"          
+		  " </lineTemplate>"
+	    "</e:categoryinfo>"
+    ],
+    "description":"栏目信息控件"
+  },
+  "轮播图flashpic ": {
+    "prefix": "<e:flashpic>",
+    "body": [
+      "<e:flashpic categorynum=\"001001\" width=\"494\" height=\"280\" row=\"3\">"
+    	"	<commontemplate>"
+      "   	<![CDATA["
+      "      {@linehtml}"
+      "    ]]>"
+   		"  </commontemplate>"
+      "  <linetemplate>"
+      "   	<![CDATA["
+      "      <!--html代码-->"
+      "    ]]>"
+      "   </linetemplate>"
+      "</e:flashpic>"
+    ],
+    "description": "轮播图控件"
+  },
+  "信息列表webinfolistnew": {
+    "prefix": "<e:webinfolistnew>",
+    "body": [
+      "<e:webinfolistnew categorynum=\"061\" row=\"8\"  isRecommend=\"1\" PhotoSrc=\"/images/Photo.gif\" FilmSrc=\"/images/Film.gif\">"
+      " <commontemplate>"
+     	"   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+    	" </commontemplate>"
+   		" <linetemplate>"
+      "   <![CDATA["
+      "     <!--html代码-->"
+      "]]>"
+      " </linetemplate>"
+      "</e:webinfolistnew>"
+    ],
+    "description": "信息列表控件"
+  },
+  "浮动广告movead": {
+    "prefix": "<e:movead>",
+    "body": [
+      "<e:movead contentfieldname=\"adcontent\" clientguidfieldname=\"adguid\">"
+      " <commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </commontemplate>"
+      " <linetemplate>"
+      "   <![CDATA["
+      "       <!--html代码-->"
+      "   ]]>"
+      " </linetemplate>"
+      "</e:movead>"
+    ],
+    "description": "浮动广告控件"
+  },
+  "当前位置currentpostion": {
+    "prefix": "<e:currentpostion>",
+    "body": [
+      "<e:currentpostion>"
+      " <commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </commontemplate>"
+      " <linetemplate>"
+      "   <![CDATA["
+      "       <!--html代码-->"
+      "   ]]>"
+      " </linetemplate>"
+		  " <lasttemplate>"
+      "   <![CDATA["
+      "       <!--html代码-->"
+      "   ]]>"
+      " </lasttemplate>"
+      "</e:currentpostion>"
+    ],
+    "description": "当前位置控件"
+  },
+  "左侧树leftmenu": {
+    "prefix": "<e:leftmenu>",
+    "body": [
+      "<e:leftmenu>"
+      " <commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </commontemplate>"
+      " <linetemplate>"
+      "   <![CDATA["
+      "     {@subhtml}"
+      "   ]]>"
+      " </linetemplate>"
+      " <speciallevel2commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </speciallevel2commontemplate>"
+      " <speciallevel2linetemplate>"
+      "   <![CDATA["
+      "       <!--html代码-->"
+      "    ]]>"
+      " </speciallevel2linetemplate>"
+      "</e:leftmenu>"
+    ],
+    "description": "左侧树控件"
+  },
+  "豆腐块moreinfosub": {
+    "prefix": "<e:moreinfosub>",
+    "body": [
+      "<e:moreinfosub row=\"5\" issingle=\"1\" isRecommend=\"1\" PhotoSrc=\"/images/Photo.gif\" FilmSrc=\"/images/Film.gif\">"
+      " <commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </commontemplate>"
+      " <linetemplate>"
+      "   <![CDATA["
+      "     {@subhtml}"
+      "   ]]>"
+      " </linetemplate>"
+      " <speciallevel2commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </speciallevel2commontemplate>"
+      " <speciallevel2linetemplate>"
+      "   <![CDATA["
+      "       <!--html代码-->"
+      "    ]]>"
+      " </speciallevel2linetemplate>"
+      "</e:moreinfosub>"
+    ],
+    "description": "豆腐块控件"
+  },
+  "分页列表subpagelist": {
+    "prefix": "<e:subpagelist>",
+    "body": [
+      "<e:subpagelist>"
+      " <wrappercommontemplate>"
+      "   <![CDATA["
+      "     {@commonhtml}"
+      "     {@pagehtml}"
+      "   ]]>"
+      " </wrappercommontemplate>"
+      " <commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </commontemplate>"
+      " <linetemplate>"
+      "   <![CDATA["
+      "       <!--html代码-->"
+      "   ]]>"
+      " </linetemplate>"
+      " <pagetemplate>"
+      "   <![CDATA["      
+      "     <!-- html代码 -->"
+      "     {@pagelisthtml}"
+      "     {@nextlink}"
+      "     {@lastlink}"
+      "   ]]>"
+			" </pagetemplate>"
+      " <pagelisttemplate>"
+      "   <![CDATA["
+      "     <!-- html代码 -->"
+      "     {@pagelink}"
+      "   ]]>"
+      " </pagelisttemplate>"
+      " <linktemplate>"
+      "   <![CDATA["
+      "     <!-- html代码 -->"
+      "   ]]>"
+      " </linktemplate>"
+      "</e:subpagelist>"
+    ],
+    "description": "分页列表控件"
+  },
+  "单条信息singleinfo":{
+    "prefix":"<e:singleinfo>",
+    "body":[
+      "<e:singleinfo issingle=\"1\">"
+      " <detailTemplate>"
+      "   <![CDATA["
+      "     <!--html代码-->"
+      "     {@attachhtml}"
+      "   ]]>"        
+		  " </detailTemplate>"
+      " <attachtemplate>"
+      "   <![CDATA[附件： <a href=\"{@attachUrl}\" title=\"{@attachName}\">{@attachName}</a>"
+      " ]]>"
+      " </attachtemplate>"
+      "</e:singleinfo>"
+    ],
+    "description":"单条信息控件"
+  },
+  "信息详情页detailinfo": {
     "prefix": "<e:detailinfo>",
-    "body": ["<e:detailinfo>", "</e:detailinfo>"],
+    "body": [
+      "<e:detailinfo>"
+      " <detailTemplate>"
+      "   <![CDATA["
+      "     <!--html代码-->"
+      "     {@attachhtml}{@videohtml}"
+      "     <input type=\"hidden\" id=\"souceinfoid\" value=\"{@infoid}\"/>"
+      "     <!-- 分享 -->"
+      "     <div class=\"ewb-as\">"
+      "       <label class=\"l\" title=\"分享\">分享到：</label>"
+      "       <div class=\"bdsharebuttonbox\">"
+      "         <a href=\"#\" class=\"bds_qzone\" data-cmd=\"qzone\" title=\"分享到QQ空间\"></a>"
+      "         <a href=\"#\" class=\"bds_tsina\" data-cmd=\"tsina\" title=\"分享到新浪微博\"></a>"
+      "         <a href=\"#\" class=\"bds_weixin\" data-cmd=\"weixin\" title=\"分享到微信\"></a>"
+      "         <a href=\"#\" class=\"bds_sqq\" data-cmd=\"sqq\" title=\"分享到QQ好友\"></a>"
+      "       </div>"
+      "       <script>"
+      "       window._bd_share_config = {"
+      "         \"common\": {"
+      "         \"bdSnsKey\": {},"
+      "         \"bdText\": \"\","
+      "         \"bdMini\": \"2\","
+      "         \"bdMiniList\": false,"
+      "         \"bdPic\": \"\","
+      "         \"bdStyle\": \"0\","
+      "         \"bdSize\": \"10\""
+      "       },"
+      "       \"share\": {},"
+      "       \"image\": {"
+      "       \"viewList\": ["
+      "           \"qzone\","
+      "           \"tsina\","
+      "           \"weixin\","
+      "           \"sqq\""
+      "         ],"
+      "       \"viewText\": \"分享到：\","
+      "       \"viewSize\": \"10\""
+      "     },"
+      "     \"selectShare\": {"
+      "       \"bdContainerClass\": null,"
+      "        \"bdSelectMiniList\": ["
+      "          \"qzone\","
+      "          \"tsina\","
+      "          \"weixin\","
+      "          \"sqq\""
+      "        ]"
+      "      }"
+      "    };"
+      "    with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script'))"
+      "       .src = 'http: //bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' +"
+      "        ~(-new Date() / 36e5)];"
+      "   </script>"
+      " </div>"
+      "</div>"
+      "]]>"
+      "</detailTemplate>"
+      "<attachTemplate>"
+      " <![CDATA["
+      " <div>"
+      "     <p>附件：</p>"
+      "     <p id=\"{@infoType}\">"
+      "       <a href=\"{@attachUrl}\" title=\"{@attachName}\" id=\"attachName\">{@attachName}</a>"
+      "     </p>"
+      "   <div style=\"width: 100%;margin: auto;display:none\" id=\"pdfdiv\">"
+      "       <iframe id=\"iframelist\" src=\"\" width=\"100%\" frameborder=\"no\" border=\"0\" scrolling=\"no\" style=\"height: 600px;width: 100%;padding-top: 20px;\"></iframe>"
+      "   </div>"
+      " </div>"
+      " ]]>"
+      " </attachTemplate>"
+      " <videotempalte>"
+      "   <![CDATA["
+      "     <div class=\"ewb-article-video\">"
+      "       <video width=\"100%\" height=\"100%\" controls title=\"{@videoName}\">"
+      "         <source src=\"{@videoUrl}\" type=\"video/mp4\">"
+      "         <source src=\"{@videoUrl}\" type=\"{@videoType}\">"
+      "       </video>"
+      "     </div>"
+      " ]]>"
+      " </videotempalte>"
+      "</e:detailinfo>"
+    ],
     "description": "详情页控件"
-  },
-  "<e:infolist>": {
-    "prefix": "<e:infolist>",
-    "body": ["<e:infolist>", "</e:infolist>"],
-    "description": "列表控件"
   }
 }
