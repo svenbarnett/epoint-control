@@ -10,10 +10,11 @@ const util = require("./util");
  * @param {*} token
  */
 function provideDefinition(document, position, token) {
-  const fileName = document.fileName;
-  const workDir = path.dirname(fileName);
   const word = document.getText(document.getWordRangeAtPosition(position));
-  let destPath = `${workDir}/src/rules/jump/${word}.md`;
+  const pluginsPath = util.getPluginPath();
+
+  let destPath = `${pluginsPath}/rules/jump/${word}.md`;
+  util.log(destPath);
   if (fs.existsSync(destPath)) {
     util.log("====== 进入 provideDefinition 方法 ======");
     return new vscode.Location(

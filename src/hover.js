@@ -10,10 +10,11 @@ const util = require("./util");
  * @param {*} token
  */
 function provideHover(document, position, token) {
-  const fileName = document.fileName;
-  const workDir = path.dirname(fileName);
   const word = document.getText(document.getWordRangeAtPosition(position));
-  let destPath = `${workDir}/src/rules/hover/${word}.md`;
+  const pluginsPath = util.getPluginPath();
+
+  let destPath = `${pluginsPath}/rules/hover/${word}.md`;
+  util.log(destPath);
   if (fs.existsSync(destPath)) {
     util.log("====== 进入 provideHover 方法 ======");
     const buffer = fs.readFileSync(destPath);
