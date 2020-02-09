@@ -9,7 +9,7 @@
     "网站大师"
   ],
   "publisher": "pengsiwen2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.42.0"
   },
@@ -53,5 +53,5 @@
     "type": "git",
     "url": "https://github.com/svenbarnett/epoint-control"
   },
-  "homepage": "https://github.com/svenbarnett/epoint-control/README.md"
+  "homepage": "https://github.com/svenbarnett/epoint-control/blob/master/README.md"
 }

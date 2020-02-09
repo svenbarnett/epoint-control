@@ -1,9 +1,5 @@
-# Change Log
+# 更新日志
 
-All notable changes to the "epointcontrol" extension will be documented in this file.
+- 2020-02-09 简单增加控件放置
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- 2020-02-09 初始化对应插件
