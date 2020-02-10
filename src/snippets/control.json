@@ -76,10 +76,10 @@
     ],
     "description": "浮动广告控件"
   },
-  "当前位置currentpostion": {
-    "prefix": "<e:currentpostion>",
+  "流动广告floatad": {
+    "prefix": "<e:floatad>",
     "body": [
-      "<e:currentpostion>"
+      "<e:floatad contentfieldname=\"adcontent\" clientguidfieldname=\"adguid\">"
       " <commontemplate>"
       "   <![CDATA["
       "     {@linehtml}"
@@ -90,9 +90,45 @@
       "       <!--html代码-->"
       "   ]]>"
       " </linetemplate>"
-		  " <lasttemplate>"
+      "</e:floatad>"
+    ],
+    "description": "流动广告控件"
+  },
+  "弹框广告popad": {
+    "prefix": "<e:popad>",
+    "body": [
+      "<e:floatad contentfieldname=\"adcontent\" clientguidfieldname=\"adguid\">"
+      " <commontemplate>"
+      "   <![CDATA["
+      "     {@linehtml}"
+      "   ]]>"
+      " </commontemplate>"
+      " <linetemplate>"
       "   <![CDATA["
       "       <!--html代码-->"
+      "   ]]>"
+      " </linetemplate>"
+      "</e:popad>"
+    ],
+    "description": "弹框广告控件"
+  },
+  "当前位置currentpostion": {
+    "prefix": "<e:currentpostion>",
+    "body": [
+      "<e:currentpostion>"
+      " <commontemplate>"
+      "   <![CDATA["
+      "     <a href=\"/\">首页</a>{@linehtml}"
+      "   ]]>"
+      " </commontemplate>"
+      " <linetemplate>"
+      "   <![CDATA["
+      "        &gt; <span><a href=\"{@categoryurl}\">{@categoryname}</a></span>"
+      "   ]]>"
+      " </linetemplate>"
+		  " <lasttemplate>"
+      "   <![CDATA["
+      "       &gt; <span><a href=\"{@categoryurl}\" style=\"color:red\" id=\"viewGuid\" value=\"{@systemname}_{@categorynum}\">{@categoryname}</a></span>"
       "   ]]>"
       " </lasttemplate>"
       "</e:currentpostion>"
